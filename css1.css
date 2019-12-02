@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS reset */
+body,div,h1,h2,h3,h4,h5,p,form,ul,li,dl,dt,dd,span,a,img,em,i,strong,b,input,select,textarea{ margin:0px; padding:0px;}
+li{list-style:none;}
+img{ border:0 none; vertical-align:top;}
+em,i{ font-style:normal}
+a{ text-decoration:none; color:#3d3d3d;}/*class中的名字直接.name的形式调用，不用考虑div的嵌套，父级元素中有包含关系的标签需要层层调用，没有包含关系的直接用该标签*/
+a:hover{color:#0771ba;}
+body{ font-family:'微软雅黑'; font-size:12px; color:#4c4c4c; background-color:#f6f6f6;}
+.clearFix{width:1000px; height:auto; margin:0px auto;*zoom:1;  }
+.clearFix:after{ content:'.'; visibility:hidden; height:0; display:block; clear: both;}/*IE6清浮动*/
+/*导航与logo*/
+.top{ width:100%; height:126px; background:#fff; border-top: #006bb4 7px solid;}
+.logo{float:left; width:320px; height:65px; margin:31px 0px 0px 15px; display: inline;}/*总结block换行 none隐藏元素 inline行排列 */
+.nav{float:left; width:auto; margin:54px 0px 0px 173px;}
+.nav li{float:left; position: relative; z-index:5; width:auto; height:50px; padding:0px 23px; }/*父级元素使用position：relative，子集元素使用position：absolute，进行定位，这种情况下使用z-index确定重叠的先后顺序,定位依照的是父类的上边框*/
+.nav li a{ color:#3d3d3d; font-size:18px;}
+.nav li a:hover{color:#0771ba;}
+.nav dl{position:absolute; top:31px; left: 0px; width: 200px; height:auto; padding:20px 0px 14px 0px;  background-color:#fff;}
+.nav dl dd{ width:198px ; position:relative; height:37px; padding:0px 25px 0px 15px;}
+.nav dl dd a{ display: block; width:156px ; height: 15px; border:#fff 1px solid; font-size:13px; color:#707885 ; padding:10px;}
+.nav dl dd.nav_dlcur a,.nav dl dd a:hover{  border:e2e2e2;background-color:#eeeeee; color:#555555;}
+.nav dl dl{position:absolute;left:200px;top:0px;border-top: #006bb4 7px solid; }
+/*flash部分*/
+.flash{position:relative; z-index:4; width:100%; height:508px; overflow:hidden;}/*溢出隐藏*/
+.flash_img{position:absolute; left:50%; top:0px; z-index:5; margin-left:-960px; width: 1920px; height:461px;border:#006bb4 7px solid;}/*居中的方法，图片居中*/
+.flash_img li{position: absolute; left:0px; top:0px; z-index:5; width:1920px; height:461px;}
+.flash_imgCur{ z-index:88}
+.flash_left,.flash_right{position:absolute; top:160px; z-index:55; width:113px; height:113px; background:  url(../images/flash_btn.png) no-repeat; overflow:hidden; text-indent:-99em;}
+.flash_right{ right:0px; background-position: 0px -113px;}
